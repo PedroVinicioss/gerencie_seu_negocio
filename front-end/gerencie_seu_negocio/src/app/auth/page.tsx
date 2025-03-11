@@ -15,11 +15,11 @@ export default function AuthPage() {
         </div>
 
         <div className={`absolute inset-y-0 left-0 w-1/2 flex items-center justify-center transition-transform duration-500 ease-in-out ${isLogin ? "translate-x-0" : "translate-x-full"} bg-black text-white`}>
-          {isLogin ? (
+          {!isLogin ? (
             <div className="text-center">
               <h1 className="text-3xl font-bold">Não possui uma conta?</h1>
               <p className="mt-2">Crie sua conta agora para dominar seus negócios!</p>
-              <button onClick={() => setIsLogin(false)} className="mt-6 px-6 py-2 border border-white rounded-full">
+              <button onClick={() => setIsLogin(true)} className="mt-6 px-6 py-2 border border-white rounded-full">
                 Registre-se
               </button>
             </div>
@@ -27,7 +27,7 @@ export default function AuthPage() {
             <div className="text-center">
               <h1 className="text-3xl font-bold">Bem vindo de volta!</h1>
               <p className="mt-2">Faça o login para administrar seu negócio</p>
-              <button onClick={() => setIsLogin(true)} className="mt-6 px-6 py-2 border border-white rounded-full">
+              <button onClick={() => setIsLogin(false)} className="mt-6 px-6 py-2 border border-white rounded-full">
                 Login
               </button>
             </div>

@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = async (email: string, password: string) => {
     const data = await loginUser(email, password);
-    Cookies.set("token", data.token, { expires: 7 }); // Armazena o token por 7 dias
+    Cookies.set("token", data.token, { expires: 7 }); 
     setUser(data.token);
   };
 

@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://suaapi.com/auth";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://localhost:7167/api/auth";
 
 export interface AuthResponse {
   token: string;
