@@ -1,6 +1,6 @@
 "use client";
-import FormLogin from "@/components/form-login/form-login";
-import FormRegister from "@/components/form-register/form-register";
+import FormLogin from "@/components/FormLogin/form-login";
+import FormRegister from "@/components/FormRegister/form-register";
 import { useState } from "react";
 
 export default function AuthPage() {
