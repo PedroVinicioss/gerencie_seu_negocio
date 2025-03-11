@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Itim } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "../context/AuthContext";
+
 
 const itins = Itim({
   weight: "400",
@@ -20,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${itins.variable} antialiased`}
-      >
-        {children}
+      <body className={`${itins.variable} antialiased`}>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
